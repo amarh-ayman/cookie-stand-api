@@ -18,16 +18,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env(
     DEBUG=(bool, False),
-    ENVIRONMENT=(str, "PRODUCTION"),
-    ALLOW_ALL_ORIGINS=(bool, False),
-    ALLOWED_HOSTS=(list, []),
-    ALLOWED_ORIGINS=(list, []),
-    DATABASE_ENGINE=(str, "django.db.backends.sqlite3"),
-    DATABASE_NAME=(str, BASE_DIR / "db.sqlite3"),
-    DATABASE_USER=(str, ""),
-    DATABASE_PASSWORD=(str, ""),
-    DATABASE_HOST=(str, ""),
-    DATABASE_PORT=(int, 5432),
+    # ENVIRONMENT=(str, "PRODUCTION"),
+    # ALLOW_ALL_ORIGINS=(bool, False),
+    # ALLOWED_HOSTS=(list, []),
+    # ALLOWED_ORIGINS=(list, []),
+    # DATABASE_ENGINE=(str, "django.db.backends.sqlite3"),
+    # DATABASE_NAME=(str, BASE_DIR / "db.sqlite3"),
+    # DATABASE_USER=(str, ""),
+    # DATABASE_PASSWORD=(str, ""),
+    # DATABASE_HOST=(str, ""),
+    # DATABASE_PORT=(int, 5432),
 )
 
 environ.Env.read_env()
@@ -58,8 +58,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     # local
-    "accounts",
-    "things",
+    "cookie_stands",
 ]
 
 MIDDLEWARE = [
