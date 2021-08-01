@@ -18,10 +18,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env(
     DEBUG=(bool, False),
-    # ENVIRONMENT=(str, "PRODUCTION"),
+    ENVIRONMENT=(str, "PRODUCTION"),
     # ALLOW_ALL_ORIGINS=(bool, False),
     # ALLOWED_HOSTS=(list, []),
-    # ALLOWED_ORIGINS=(list, []),
+    ALLOWED_ORIGINS=(list, []),
     # DATABASE_ENGINE=(str, "django.db.backends.sqlite3"),
     # DATABASE_NAME=(str, BASE_DIR / "db.sqlite3"),
     # DATABASE_USER=(str, ""),
@@ -42,7 +42,6 @@ SECRET_KEY = env.str("SECRET_KEY")
 DEBUG = env.bool("DEBUG")
 
 ALLOWED_HOSTS = tuple(env.list("ALLOWED_HOSTS"))
-
 
 # Application definition
 
@@ -148,7 +147,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-AUTH_USER_MODEL = "accounts.CustomUser"
+# AUTH_USER_MODEL = "accounts.CustomUser"
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
